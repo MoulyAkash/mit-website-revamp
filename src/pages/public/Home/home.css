@@ -1,0 +1,116 @@
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--body-color);
+  overflow-y: auto;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 500px;
+  margin-top: 2vh;
+  flex-wrap: wrap;
+}
+
+.banner .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.banner > .right > .banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner > .right > .book-image {
+  position: absolute;
+  top: 0;
+  left: 17%;
+  width: 50px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transform: rotate(-20deg);
+}
+
+.banner > .right > .chart-image {
+  position: absolute;
+  bottom: 23%;
+  left: 17%;
+  width: 40px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.banner > .right > .chat-image {
+  position: absolute;
+  top: 10%;
+  right: 12%;
+  width: 30px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.banner > .left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  height: 100%;
+  padding: 30px 75px;
+}
+
+.banner > .left > span {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.banner > .left > h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+.banner > .left > .description > p {
+  font-weight: 500;
+  color: var(--primary-color-light);
+  line-height: 1.5;
+}
+
+.banner > .left > .flex-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.banner > .left > .flex-row > .announcements-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 15px 30px 15px 20px;
+  border-radius: 50px;
+  background-color: var(--yellow);
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.banner > .left > .flex-row > p {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
