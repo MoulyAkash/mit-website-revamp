@@ -3,6 +3,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px 75px;
+  @media only screen and (max-width: 910px) {
+    padding: 20px 30px;
+  }
 }
 
 .header-container > h1 {
@@ -21,6 +24,9 @@
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
+  @media only screen and (max-width: 910px) {
+    display: none;
+  }
 }
 
 .header-container .menus > .menu-items a.active {
