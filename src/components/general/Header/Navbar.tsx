@@ -23,10 +23,14 @@ function modifyRoutes(routes: MenuItem[], parentPath = "") {
   });
 }
 
-const Navbar = () => {
+const Navbar = (props: any) => {
   return (
     <nav>
-      <ul className="menus noselect">
+      <ul
+        className={`menus nohighlights noselect ${
+          props.menuOpen ? "open" : ""
+        }`}
+      >
         {modifyRoutes(allPublicRoutes).map((menu: MenuItem, index: number) => (
           <MenuItem key={index} menuItem={menu} depthLevel={0} />
         ))}

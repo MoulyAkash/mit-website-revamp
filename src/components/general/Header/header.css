@@ -24,9 +24,7 @@
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
-  @media only screen and (max-width: 910px) {
-    display: none;
-  }
+  transition: all 0.3s ease-in-out;
 }
 
 .header-container .menus > .menu-items a.active {
@@ -91,12 +89,24 @@
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.2s ease-in-out;
+  @media only screen and (max-width: 910px) {
+    position: static;
+    box-shadow: none;
+    padding: 0;
+    opacity: 1;
+    height: 0;
+    overflow-y: hidden;
+    /* background-color: red; */
+  }
 }
 
 .header-container .dropdown.show {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
+  @media only screen and (max-width: 910px) {
+    height: 100%;
+  }
 }
 
 .header-container .dropdown .dropdown-submenu {
@@ -120,6 +130,9 @@
   justify-content: center;
   align-items: center;
   gap: 15px;
+  @media only screen and (max-width: 910px) {
+    display: none;
+  }
 }
 
 .header-container > .login-container > .login-button {
@@ -135,4 +148,70 @@
   font-size: 13px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
+}
+
+.header-container .burger-menu {
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+@media (max-width: 640px) {
+  .header-container .burger-menu {
+    display: flex;
+  }
+  .header-container {
+    flex-direction: column;
+    align-items: start;
+  }
+  .header-container .menus {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 0.25rem;
+    margin-top: 25px;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+  }
+  .header-container .dropdown {
+    left: 50%;
+  }
+
+  .header-container .open {
+    height: 100%;
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+  }
+  .header-container .burger-menu > .sus {
+    height: 0.25rem;
+    width: 100%;
+    background-color: black;
+    border-radius: 0.2rem;
+    visibility: visible;
+    transition: all 0.2s ease-out;
+  }
+  .header-container .burger-menu > .top {
+    width: 130%;
+    margin-left: 8%;
+    transform-origin: top left;
+    transform: rotate(45deg);
+    transition: all 0.3s ease-in-out;
+  }
+  .header-container .burger-menu > .mid {
+    visibility: hidden;
+  }
+  .header-container .burger-menu > .bottom {
+    width: 130%;
+    margin-left: 8%;
+    transform-origin: bottom left;
+    transform: rotate(-45deg);
+    transition: all 0.3s ease-in-out;
+  }
 }
