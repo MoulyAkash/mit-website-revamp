@@ -1,0 +1,103 @@
+.deanMain {
+  background-image: url("./students2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content;
+  width: 100%;
+  justify-content: space-between;
+  user-select: none;
+  
+}
+.deanMain > .deanMask{
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+.deanMain .deanContent {
+  display: flex;
+  flex-direction: column;
+  padding: 18vh;
+  
+}
+.deanContent .deanTitle {
+  font-size: 50px;
+  color: azure;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  /* border: red solid 1px; */
+  width: 110%;
+}
+.deanContent .deanQuote {
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  color: azure;
+  padding-top: 2%;
+  font-weight: 500;
+  /* border: red solid 1px; */
+  gap: 10px;
+  line-height: 1.5;
+}
+.deanContent  > .flex-row {
+    display: flex;
+    align-items: center;
+    padding-top: 5%;
+    /* gap: 100px; */
+}
+.deanContent > .flex-row > .more-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 15px 30px;
+  border-radius: 50px;
+  background-color: var(--yellow);
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.deanMain > .deanMask > .deanImage{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.deanMain > .deanMask > .deanImage > img{
+  /* margin-right: 20px; */
+  height: 100%;
+  
+  /* margin-bottom: -40px; */
+}
+
+
+@media (max-width: 1300px) {
+  .deanMain .deanContent {
+    padding: 50px;
+    width: 100%;
+    /* border: red solid; */
+  }
+  .deanContent .deanTitle {
+    font-size: 30px;
+  }
+  .deanContent .deanQuote {
+    width: 100%;
+    font-size: small;
+  }
+  .deanmain > .deanMask > img{
+    object-fit: cover;
+  }
+}
+@media (max-width: 914px) {
+
+  .deanMain {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .deanMain > .deanMask{
+    flex-wrap: wrap-reverse;
+  }
+}

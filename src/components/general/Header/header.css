@@ -161,7 +161,7 @@
   height: 1.7rem;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 910px) {
   .header-container .burger-menu {
     display: flex;
   }

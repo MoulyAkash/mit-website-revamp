@@ -1,22 +1,22 @@
 import "./horizontalcards.css";
 
-export interface HorizontalCardProps {
+export interface HorizontalCard {
   name: string;
-  svg: any;
-  svgBackground: string;
+  Icon: any;
+  iconFillColor: string;
   description: string;
 }
 
 function HorizontalCard({
   name,
-  svg,
-  svgBackground,
+  Icon,
+  iconFillColor,
   description,
-}: HorizontalCardProps) {
+}: HorizontalCard) {
   return (
-    <div className="dept-card-container">
-      <div className="svg-container" style={{ backgroundColor: svgBackground }}>
-        {svg}
+    <div className="dept-card">
+      <div className="svg-container" style={{ backgroundColor: iconFillColor }}>
+        <Icon />
       </div>
       <div className="details">
         <div className="dept-name">{name}</div>
@@ -26,16 +26,12 @@ function HorizontalCard({
   );
 }
 
-export default function HorizontalCards({
-  data,
-}: {
-  data: HorizontalCardProps[];
-}) {
+export default function HorizontalCards({ data }: { data: HorizontalCard[] }) {
   return (
     <div className="dept-container">
       <div className="title">Our Departments</div>
       <div className="dept-wrapper">
-        {data?.map((item: HorizontalCardProps, index: number) => (
+        {data?.map((item: HorizontalCard, index: number) => (
           <HorizontalCard key={index} {...item} />
         ))}
       </div>

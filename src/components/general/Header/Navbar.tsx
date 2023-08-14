@@ -1,5 +1,5 @@
 import MenuItem from "./MenuItems";
-import { allPublicRoutes } from "../../../routes";
+import { topBarItems } from "../../../routes";
 
 export interface MenuItem {
   path: string;
@@ -31,7 +31,7 @@ const Navbar = (props: any) => {
           props.menuOpen ? "open" : ""
         }`}
       >
-        {modifyRoutes(allPublicRoutes).map((menu: MenuItem, index: number) => (
+        {modifyRoutes(topBarItems).map((menu: MenuItem, index: number) => (
           <MenuItem key={index} menuItem={menu} depthLevel={0} />
         ))}
       </ul>

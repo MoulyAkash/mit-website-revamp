@@ -7,6 +7,7 @@ import MainApp from "./pages/public/MainApp";
 import Home from "./pages/public/Home/Home";
 import About from "./pages/public/About/About";
 import Contact from "./pages/public/Contact/Contact";
+import Announcements from "./pages/public/Announcements/Announcements";
 
 // Department Pages Import
 import AeroNauticalHome from "./pages/public/Departments/Aeronautical/Home";
@@ -21,18 +22,13 @@ import RubberAndPlasticsHome from "./pages/public/Departments/RubberAndPlastics/
 import AdminMainApp from "./pages/admin/MainApp";
 
 const generateAppData = (publicRoutes: any, privateRoutes: any) => {
-  const topBarItems = Object.entries(publicRoutes).map(
-    ([path, route]: any) => ({
-      path,
-      title: route.title,
-    })
-  );
+  const topBarItems = publicRoutes.filter((route: any) => !route.avoidInHeader);
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: <MainApp />,
-      children: allPublicRoutes,
+      children: publicRoutes,
     },
     {
       path: "/admin/",
@@ -49,6 +45,12 @@ export const allPublicRoutes = [
     path: "/",
     title: "Home",
     element: <Home />,
+    children: [
+      {
+        path: "https://www.annauniv.edu/",
+        title: "AU Home",
+      },
+    ],
   },
   {
     path: "/departments/",
@@ -100,7 +102,7 @@ export const allPublicRoutes = [
     ],
   },
   {
-    path: "/about",
+    path: "/about?/:section",
     title: "About Us",
     element: <About />,
   },
@@ -108,6 +110,12 @@ export const allPublicRoutes = [
     path: "/contact",
     title: "Contact",
     element: <Contact />,
+  },
+  {
+    path: "/announcements",
+    title: "Announcements",
+    element: <Announcements />,
+    avoidInHeader: true,
   },
 ];
 

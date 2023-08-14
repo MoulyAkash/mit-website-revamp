@@ -5,6 +5,7 @@ import BannerImage from "../../../assets/banner-student.png";
 import BookImage from "../../../assets/book.png";
 import ChartImage from "../../../assets/chart.png";
 import ChatImage from "../../../assets/chat.png";
+import { NavLink } from "react-router-dom";
 
 export default function Banner() {
   return (
@@ -23,10 +24,10 @@ export default function Banner() {
           <p>industry. Lorem Ipsum has been the industry</p>
         </div>
         <div className="flex-row">
-          <button className="announcements-button">
+          <NavLink className="announcements-button" to="/announcements">
             <BiSolidBell size={20} />
             Announcements
-          </button>
+          </NavLink>
           <p>4 new in last 7 days</p>
         </div>
       </div>

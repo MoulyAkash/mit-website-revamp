@@ -2,6 +2,8 @@
   background-color: #f9fbfc;
   display: flex;
   flex-direction: column;
+  color: var(--primary-color);
+  margin-bottom: 60px;
 }
 
 .dept-container .dept-wrapper {
@@ -14,45 +16,51 @@
 }
 
 .dept-container .title {
-  font-size: 40px;
-  font-weight: bolder;
+  font-size: 32px;
+  font-weight: 800;
   text-align: center;
-  margin: 50px 0;
+  margin: 40px 0;
 }
 
-.dept-card-container {
-  width: 450px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
+.dept-card {
   display: flex;
   flex-direction: row;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: white;
+  min-width: 420px;
   gap: 10px;
+  font-size: 30px;
+  border: 1px solid #dedede;
+  @media (max-width: 768px) {
+    min-width: 100%;
+  }
 }
 
-.dept-card-container .svg-container {
+.dept-card .svg-container {
   height: 50px;
   width: 50px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--white);
 }
 
-.dept-card-container .dept-name {
-  font-weight: bold;
-  font-size: 20px;
+.dept-card .dept-name {
+  font-weight: 700;
+  font-size: 17px;
 }
 
-.dept-card-container .description {
-  color: var(--not-so-light-grey);
+.dept-card .description {
   font-weight: 600;
+  font-size: 12px;
+  color: var(--not-so-light-grey);
   text-align: justify;
-  font-size: 13px;
 }
 
-.dept-card-container .details {
-  justify-content: space-between;
+.dept-card .details {
   display: flex;
   flex-direction: column;
+  gap: 3px;
 }
