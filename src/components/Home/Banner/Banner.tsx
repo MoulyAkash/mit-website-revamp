@@ -1,41 +1,59 @@
+import { useState, useEffect } from "react";
 import { BiSolidBell } from "react-icons/bi";
+import { NavLink } from "react-router-dom";
 import "./banner.css";
 
 import BannerImage from "../../../assets/banner-student.png";
+import MITFrontGate from "../../../assets/mit-front-gate.jpg";
 import BookImage from "../../../assets/book.png";
 import ChartImage from "../../../assets/chart.png";
 import ChatImage from "../../../assets/chat.png";
-import { NavLink } from "react-router-dom";
+
+import APIService from "../../../api/Service";
 
 export default function Banner() {
+  const [annnouncementCount, setAnnouncementCount] = useState(0);
+  const NoOfDays = 5;
+  useEffect(() => {
+    const body = {
+      tag: "getAnnouncementCount",
+      param: [NoOfDays],
+    };
+    APIService.PostData(body, "/DB/Query")
+      .then((res: any) => {
+        setAnnouncementCount(res?.data[0]?.COUNT);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <div className="banner">
       <div className="left">
-        <span>⚡ Best E-Learning Platform</span>
         <h1>
-          <p>Getting best</p>
-          <p>quality education</p>
-          <p>is now more easier</p>
+          <p>Madras Institute of Technology Campus</p>
+          <p>Anna University</p>
         </h1>
         <div className="description">
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-          </p>
-          <p>industry. Lorem Ipsum has been the industry</p>
+          <p>Established in 1949, by Shri C. Rajam</p>
+          <p>Merged in 1978 with Anna University</p>
+          <p>A Benchmarked Institution for Engineering and Technology</p>
+          <p>with alumni footprints in all domains across the globe</p>
         </div>
         <div className="flex-row">
           <NavLink className="announcements-button" to="/announcements">
             <BiSolidBell size={20} />
             Announcements
           </NavLink>
-          <p>4 new in last 7 days</p>
+          {annnouncementCount && <p>{annnouncementCount} new in last 7 days</p>}
         </div>
       </div>
       <div className="right">
-        <img src={BannerImage} className="banner-image" />
-        <img src={BookImage} className="book-image" />
+        <img src={MITFrontGate} className="banner-image" />
+        {/* <img src={BookImage} className="book-image" />
         <img src={ChartImage} className="chart-image" />
-        <img src={ChatImage} className="chat-image" />
+        <img src={ChatImage} className="chat-image" /> */}
       </div>
     </div>
   );

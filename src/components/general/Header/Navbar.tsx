@@ -10,9 +10,10 @@ export interface MenuItem {
 
 function modifyRoutes(routes: MenuItem[], parentPath = "") {
   return routes.map((route) => {
-    const path = route.path.includes("http://")
-      ? route.path
-      : parentPath + route.path;
+    const path =
+      route.path.includes("http://") || route.path.includes("https://")
+        ? route.path
+        : parentPath + route.path;
     const modifiedRoute = { ...route, path };
 
     if (route.children) {

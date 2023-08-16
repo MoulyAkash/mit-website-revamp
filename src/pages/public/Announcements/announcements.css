@@ -1,9 +1,45 @@
 .anouncementContainer {
+  width: 100vw;
+  padding: 2%;
+}
+.recentContainer,
+.oldContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.announcementCardContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 40px;
-  padding: 2%;
-  width: 100vw;
+}
+.announcementTypeContainer {
+  width: 100%;
+  @media (max-width: 900px) {
+    padding: 1% 0 0 2%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.headText {
+  font-size: medium;
+  font-weight: 600;
+  color: var(--darkGrey);
+}
+.verticalTitleBar {
+  height: 5vh;
+  width: 10px;
+  background-color: var(--purple);
+  margin-right: 2%;
+  @media (max-width: 800px) {
+    height: 3vh;
+  }
+}
+.announcementType {
+  margin: 0 1%;
+  font-size: large;
+  font-weight: 600;
+  color: var(--primary-color);
 }

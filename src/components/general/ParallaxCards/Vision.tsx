@@ -13,8 +13,6 @@ export default function Vision() {
           remain as a preferred partner to the industry and community for their
           economic and social development through excellence in teaching,
           research and consultancy.
-        </div>
-        <div>
           Anna University shall be recognized as a point of reference, a
           catalyst, a facilitator, a trend setter and a leader in technical
           education.

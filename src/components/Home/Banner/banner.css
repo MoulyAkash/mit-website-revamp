@@ -19,12 +19,15 @@
   justify-content: flex-end;
   max-height: 500px;
   position: relative;
+  flex: 1;
 }
 
 .banner > .right > .banner-image {
   width: 100%;
   max-height: 500px;
-  object-fit: cover;
+  max-height: 700px;
+  /* background-color: red; */
+  object-fit: contain;
   @media only screen and (max-width: 910px) {
     max-height: 500px;
   }
@@ -65,6 +68,7 @@
   width: 50%;
   height: 100%;
   padding: 30px 75px;
+  justify-content: center;
   @media only screen and (max-width: 910px) {
     width: 100%;
     padding: 10px 30px;
@@ -78,7 +82,8 @@
 }
 
 .banner > .left > h1 {
-  font-size: 60px;
+  /* font-size: 60px; */
+  font-size: 31px;
   font-weight: 700;
   color: var(--primary-color);
   text-transform: capitalize;
@@ -87,8 +92,11 @@
   }
 }
 
-@media only screen and (max-width: 910px) {
-  .banner > .left > .description {
+.banner > .left > .description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  @media only screen and (max-width: 910px) {
     padding: 10px 0px;
   }
 }

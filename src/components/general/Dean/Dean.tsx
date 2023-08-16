@@ -1,6 +1,7 @@
 import React from "react";
 import "./dean.css";
-import DeanImage from "./professor1.png";
+// import DeanImage from "./professor1.png";
+import DeanImage from "./Dean_bgRemoved.png";
 
 function Dean() {
   return (
@@ -19,7 +20,7 @@ function Dean() {
         <div className="deanContent">
           <div className="deanTitle">
             <span>Limitless Learning, </span>
-            <span>Limitless Possibilities !</span>
+            <span>Limitless Possibilities!</span>
           </div>
           <div className="deanQuote">
             <span>

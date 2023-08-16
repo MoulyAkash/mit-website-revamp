@@ -1,5 +1,5 @@
 //@ts-nocheck
-const url = "http://localhost:5959/api";
+const url = "http://localhost:3000";
 
 export default class APIService {
   static async PostData(body: any, route: string) {

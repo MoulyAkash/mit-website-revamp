@@ -17,17 +17,48 @@ import oracle from "../../../assets/PlacementPartners/oracle.svg";
 import cat from "../../../assets/PlacementPartners/caterpillar.svg";
 import barclays from "../../../assets/PlacementPartners/barclays.svg";
 
+// Centers Images Imports
 import LibraryImage from "../../../assets/Facilities/library.jpg";
 import HostelImage from "../../../assets/Facilities/hostel.jpg";
 import HealthCentreImage from "../../../assets/Facilities/health_centre.jpg";
 import ComputerCenterImage from "../../../assets/Facilities/computer_center.jpg";
 import SportsImage from "../../../assets/Facilities/sports.jpg";
+import AUKBCImage from "../../../assets/Facilities/aukbc.jpg";
+import CentreForAerospaceImage from "../../../assets/Facilities/centre_for_aersospace.jpeg";
+import CenterForIoTImage from "../../../assets/Facilities/center_for_iot.jpg";
+import PlacementImage from "../../../assets/Facilities/placement.jpg";
+
+// Facilities Images Imports
+import TEDCImage from "../../../assets/FacilitiesIcons/tedc.png";
+import MuseumImage from "../../../assets/FacilitiesIcons/museum.png";
+import NSOImage from "../../../assets/FacilitiesIcons/nso.png";
+import MitraImage from "../../../assets/FacilitiesIcons/mitra.png";
+import HostelImageIcon from "../../../assets/FacilitiesIcons/hostel.png";
+import YRCImage from "../../../assets/FacilitiesIcons/yrc.png";
+import PDAImage from "../../../assets/FacilitiesIcons/pda.png";
+import NSSImage from "../../../assets/FacilitiesIcons/nss.png";
+import CSMITImage from "../../../assets/FacilitiesIcons/csmit.png";
+import AthaneumImage from "../../../assets/FacilitiesIcons/athaneum.png";
+import MITQuillImage from "../../../assets/FacilitiesIcons/mit_quill.png";
+import TamilMandramImage from "../../../assets/FacilitiesIcons/tamil_mandram.png";
+import TBOImage from "../../../assets/FacilitiesIcons/tbo.png";
+import RotaractClubImage from "../../../assets/FacilitiesIcons/rotaract_club.png";
+import VarietyTeamImage from "../../../assets/FacilitiesIcons/variety_team.png";
 
 export const numberCountsData = [
-  { count: "8K+", description: "Placed Students" },
-  { count: "108K+", description: "Students" },
-  { count: "200+", description: "Expert Instructors" },
-  { count: "310+", description: "Trendy Subjects" },
+  { count: "2.8K+", description: "Undergraduates" },
+  { count: "216", description: "Postgraduates" },
+  { count: "306", description: "PhD Scholars" },
+  { count: "06", description: "Research Centres" },
+];
+
+export const numberCountsData2 = [
+  { count: "210/124", description: "Faculty/Staff" },
+  { count: "49Cr+", description: "R & D Grants" },
+  { count: "588", description: "Publications" },
+  { count: "14/6", description: "Patents Published/Granted" },
+  { count: "95.6K+", description: "Books RF ID - Automation" },
+  { count: "23", description: "Student Clubs" },
 ];
 
 export const departmentsData: HorizontalCard[] = [
@@ -89,90 +120,90 @@ export const departmentsData: HorizontalCard[] = [
 
 export const footerContents: FooterContent[] = [
   {
-    title: "About Us",
+    title: "Academics",
     url: "#",
     content: [
       {
-        title: "Company",
-        url: "company",
+        title: "Academic Courses",
+        url: "https://mitindia.edu/en/courses",
       },
       {
-        title: "Teams",
-        url: "teams",
+        title: "ACOE",
+        url: "https://acoe.annauniv.edu/",
       },
       {
-        title: "Profile",
-        url: "profile",
+        title: "Academic Schedules",
+        url: "",
       },
       {
-        title: "Company",
-        url: "company",
+        title: "Centre for Research",
+        url: "http://ctdt.annauniv.edu/",
+      },
+      {
+        title: "Students Feedback",
+        url: "http://fbonline.annauniv.edu:8080/fb/fb.jsp",
       },
     ],
   },
   {
-    title: "About Us",
+    title: "Administration",
     url: "#",
     content: [
       {
-        title: "Company",
-        url: "company",
+        title: "Dean, MIT Campus",
+        url: "https://annauniv.irins.org/profile/43400",
       },
       {
-        title: "Teams",
-        url: "teams",
+        title: "People",
+        url: "https://mitindia.edu/en/administration/office-page",
       },
       {
-        title: "Profile",
-        url: "profile",
+        title: "Departments",
+        url: "https://mitindia.edu/en/all-departments",
       },
       {
-        title: "Company",
-        url: "company",
+        title: "Acts & Statues",
+        url: "https://www.annauniv.edu/pdf/Acts%20&%20Statues-New.pdf",
+      },
+      {
+        title: "Mandatory Disclosure",
+        url: "https://iqac.annauniv.edu/",
       },
     ],
   },
   {
-    title: "Courses",
+    title: "Downloads",
     url: "#",
     content: [
       {
-        title: "Design",
-        url: "design",
+        title: "WiFi Registration",
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSdfAkiupN8aSNQynN383_njOlsF-E_UWQY50S0DHOGLSzcxBw/viewform",
       },
       {
-        title: "Development",
-        url: "development",
-      },
-      {
-        title: "Marketing",
-        url: "marketing",
-      },
-      {
-        title: "Blog",
-        url: "blog",
+        title: "Network Issues",
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSdccEYSatG7fShAYwLMJ0hwvfvtDtW_cc00ZpGliYpfeYzhBA/viewform",
       },
     ],
   },
   {
-    title: "Courses",
+    title: "Facilities",
     url: "#",
     content: [
       {
-        title: "Design",
-        url: "design",
+        title: "Computer Centre",
+        url: "https://cc.mitindia.edu/",
       },
       {
-        title: "Development",
-        url: "development",
+        title: "Library",
+        url: "",
       },
       {
-        title: "Marketing",
-        url: "marketing",
+        title: "Health Centre",
+        url: "",
       },
       {
-        title: "Blog",
-        url: "blog",
+        title: "Student Grievance Redressal",
+        url: "https://docs.google.com/forms/d/e/1FAIpQLScrI2aIZGcv7FyhvQL-0bwJCliULY0dShhKLe7VEQXNT00Bpw/viewform",
       },
     ],
   },
@@ -180,30 +211,108 @@ export const footerContents: FooterContent[] = [
 
 export const placementPartnersLogos = [bny, oracle, cat, barclays];
 
-export const facilitiesData = [
-  {
-    title: "Library",
-    img: LibraryImage,
-    description: "2K+ Active Members",
-  },
-  {
-    title: "Hostel",
-    img: HostelImage,
-    description: "2K+ Active Members",
-  },
-  {
-    title: "Health Centre",
-    img: HealthCentreImage,
-    description: "2K+ Active Members",
-  },
+export const centersData = [
   {
     title: "Computer Center",
     img: ComputerCenterImage,
     description: "2K+ Active Members",
   },
   {
+    title: "AUKBC - MIT",
+    img: AUKBCImage,
+    description: "2K+ Active Members",
+  },
+  {
+    title: "Center for Aerospace",
+    img: CentreForAerospaceImage,
+    description: "2K+ Active Members",
+  },
+  {
+    title: "Center for IoT",
+    img: CenterForIoTImage,
+    description: "2K+ Active Members",
+  },
+  {
+    title: "Library",
+    img: LibraryImage,
+    description: "2K+ Active Members",
+  },
+  {
+    title: "Placement",
+    img: PlacementImage,
+    description: "2K+ Active Members",
+  },
+  {
     title: "Sports",
     img: SportsImage,
     description: "2K+ Active Members",
+  },
+  {
+    title: "Health Center",
+    img: HealthCentreImage,
+    description: "2K+ Active Members",
+  },
+];
+
+export const facilitiesData = [
+  {
+    title: "Hostel",
+    img: HostelImageIcon,
+  },
+  {
+    title: "NSS",
+    img: NSSImage,
+  },
+  {
+    title: "NSO",
+    img: NSOImage,
+  },
+  {
+    title: "YRC",
+    img: YRCImage,
+  },
+  {
+    title: "Athanaeum",
+    img: AthaneumImage,
+  },
+  {
+    title: "PDA",
+    img: PDAImage,
+  },
+  {
+    title: "Tamil Mandram",
+    img: TamilMandramImage,
+  },
+  {
+    title: "Rotaract Club",
+    img: RotaractClubImage,
+  },
+  {
+    title: "Computer Society",
+    img: CSMITImage,
+  },
+  {
+    title: "TBO",
+    img: TBOImage,
+  },
+  {
+    title: "MIT Quill",
+    img: MITQuillImage,
+  },
+  {
+    title: "Variety Team",
+    img: VarietyTeamImage,
+  },
+  {
+    title: "Museum",
+    img: MuseumImage,
+  },
+  {
+    title: "MITRA",
+    img: MitraImage,
+  },
+  {
+    title: "TEDC",
+    img: TEDCImage,
   },
 ];

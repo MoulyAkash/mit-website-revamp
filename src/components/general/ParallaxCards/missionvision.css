@@ -13,13 +13,13 @@
 
 .vi-wrapper {
     position: absolute;
-    margin-left: 62vw;
-    margin-top: 30vh;
+    margin-left: 8vw;
+    margin-top: 13.5vh;
     /* top: 150px;
     left: 950px; */
 }
 
-@media(max-width: 680px){
+@media(max-width: 1400px){
     .mi-vi-wrapper {
         position: unset;
         display: flex;

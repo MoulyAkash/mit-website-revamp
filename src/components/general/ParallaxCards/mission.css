@@ -1,5 +1,4 @@
 .mission-main-card {
-  width: 90vw;
   padding: 3vw 3vw 3vh 3vw;
   background-color: whitesmoke;
   box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.1);
@@ -11,46 +10,51 @@
   background: radial-gradient(at left top, #34dd88, #38d9c2);
   color: var(--white);
   font-weight: 600;
-  padding-right: 35vw;
-  @media (max-width: 910px) {
+  padding-left: 35vw;
+  align-items: right;
+  justify-content: end;
+  @media (max-width: 1400px) {
     padding: 3vh 5vw;
   }
-  /* background-color: red; */
-  /* user-selet: none; */
 }
 
 .mission-main-card ul {
   list-style-type: disc;
   padding: 0;
   margin: 0;
-  /* width: 50vw; */
   text-align: justify;
   padding-left: 1.2vw;
+  overflow: hidden; 
+  max-height: 230px;
 
-  /* @media (max-width: 910px) {
-    width: 100%;
-  } */
 }
 
 .mission-main-card ul li {
   list-style: disc;
   padding: 8px;
-  @media (max-width: 910px) {
-    display: none;
-  }
+  /* @media (max-width: 1400px) {
+    display: list-item;
+  } */
 }
 
-@media (max-width: 910px) {
-  .mission-main-card ul li:first-child {
-    display: list-item;
+@media (max-width: 1400px) {
+
+  .mission-main-card ul li:nth-child(2){
+    display: none;
   }
+  .mission-main-card ul li:nth-child(3){
+    display: none;
+  }
+  .mission-main-card ul li:nth-child(4){
+    display: none;
+  }
+  
 }
 
 .mission-main-card > .heading {
   font-size: 60px;
   font-weight: 800;
   margin-bottom: 0.2em;
-  /* color: #545ce4; */
   color: azure;
   @media (max-width: 910px) {
     font-size: 48px;
@@ -58,16 +62,15 @@
 }
 
 .intro {
-  /* width: 750px; */
   text-align: justify;
 }
 
 .mission-main-card > .login-container {
   display: flex;
-  /* padding-left: 100px; */
   padding-top: 8px;
   align-items: right;
   justify-content: right;
+  
 
   @media (max-width: 910px) {
     padding-right: 0;

@@ -102,7 +102,53 @@ export const allPublicRoutes = [
     ],
   },
   {
-    path: "/about?/:section",
+    path: "/administration",
+    title: "Administration",
+    element: <Home />,
+    children: [
+      {
+        path: "https://annauniv.irins.org/profile/43400",
+        title: "Dean",
+      },
+      {
+        path: "https://mitindia.edu/en/administration/office-page",
+        title: "Office Staff",
+      },
+    ],
+  },
+  {
+    path: "/centres",
+    title: "Centres",
+    element: <Home />,
+    children: [
+      {
+        path: "https://cc.mitindia.edu/",
+        title: "Computer Centre",
+      },
+      {
+        path: "https://www.au-kbc.org/",
+        title: "AU-KBC Research Centre",
+      },
+      {
+        path: "http://www.casr.mitindia.edu/",
+        title: "Centre for Aerospace Research",
+      },
+    ],
+  },
+  {
+    path: "/facilities",
+    title: "Facilities",
+    element: <Home />,
+    children: [
+      {
+        path: "http://www.placement.mitindia.edu/",
+        title: "Placements",
+      },
+    ],
+  },
+  {
+    // path: "/about?/:section",
+    path: "https://mitindia.edu/en/home/history",
     title: "About Us",
     element: <About />,
   },
