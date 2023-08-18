@@ -8,14 +8,14 @@
   }
 }
 
-.header-container > h1 {
+.header-container h1 {
   display: flex;
   color: var(--primary-color);
   font-size: 28px;
   cursor: pointer;
 }
 
-.header-container > h1 > span {
+.header-container h1 > span {
   color: var(--secondary-color);
 }
 

@@ -11,7 +11,7 @@ interface NumberCountProps {
 
 export default function NumberCount({ data }: NumberCountProps) {
   return (
-    <div className="numbers-count-container">
+    <div className="numbers-count-container noselect">
       {data.map((item: any, index: number) => (
         <span key={index} className="number-count">
           <h2>{item.count}</h2>

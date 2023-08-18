@@ -1,5 +1,5 @@
 //@ts-nocheck
-const url = "http://localhost:3000";
+const url = "https://d861-14-139-190-106.ngrok-free.app";
 
 export default class APIService {
   static async PostData(body: any, route: string) {

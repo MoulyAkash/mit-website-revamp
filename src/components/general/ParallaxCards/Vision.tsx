@@ -15,7 +15,7 @@ export default function Vision() {
           research and consultancy.
           Anna University shall be recognized as a point of reference, a
           catalyst, a facilitator, a trend setter and a leader in technical
-          education.
+          education
         </div>
       </div>
     </div>

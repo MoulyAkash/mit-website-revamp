@@ -4,10 +4,14 @@ import { NavLink } from "react-router-dom";
 import "./banner.css";
 
 import BannerImage from "../../../assets/banner-student.png";
-import MITFrontGate from "../../../assets/mit-front-gate.jpg";
+// import MITFrontGate from "../../../assets/mit-front-gate.jpg";
+import MITFrontGate from "../../../assets/mit-front.jpg";
+import Subish from "../../../assets/subsus.png";
 import BookImage from "../../../assets/book.png";
 import ChartImage from "../../../assets/chart.png";
 import ChatImage from "../../../assets/chat.png";
+// import AnnaLogo from "../../../assets/anna_logo.png";
+import AnnaLogo from "../../../assets/anna_logo_grey.png";
 
 import APIService from "../../../api/Service";
 
@@ -29,9 +33,13 @@ export default function Banner() {
   }, []);
 
   return (
-    <div className="banner">
+    <div className="banner noselect">
       <div className="left">
         <h1>
+          <img
+            src={AnnaLogo}
+            // style={{ height: 100, width: 100, marginBottom: 10, marginTop: -20 }}
+          />
           <p>Madras Institute of Technology Campus</p>
           <p>Anna University</p>
         </h1>

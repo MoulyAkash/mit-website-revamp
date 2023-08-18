@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import "./mission.css";
 
 export default function Mission() {
-  const [viewMore, setViewMore] = useState(false);
+  const [viewMore, setViewMore] = useState(true);
   const MissionContent = [
     "Producing students who are intellectually and technically equipped with well defined knowledge, skills and ethics who are creative thinkers, inspiring leaders and contributing citizens",
     "Introducing high quality academic and research programmes and providing extension services in cutting edge technologies",
@@ -22,7 +22,7 @@ export default function Mission() {
       <div className="heading">Mission</div>
       <div className="intro">
         Anna University shall contribute to the educational, economic and social
-        development by:
+        development by
       </div>
       <ul
         className="mi-content"
@@ -34,14 +34,14 @@ export default function Mission() {
         })}
       </ul>
       <div className={`login-container ${viewMore ? "open" : ""}`}>
-        <button
+        {/* <button
           className="login-button"
           onClick={() => {
             setViewMore(!viewMore);
           }}
         >
           {viewMore ? "View Less" : "View More"}
-        </button>
+        </button> */}
       </div>
     </div>
   );

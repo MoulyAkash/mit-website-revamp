@@ -7,6 +7,9 @@ import {
   GiSatelliteCommunication,
   GiFlatTire,
 } from "react-icons/gi";
+
+import Rpt from "../../../assets/rpt.png";
+
 import { HiMiniCpuChip } from "react-icons/hi2";
 
 import { HorizontalCard } from "../../../components/general/HorizontalCards/HorizontalCards";
@@ -27,6 +30,7 @@ import AUKBCImage from "../../../assets/Facilities/aukbc.jpg";
 import CentreForAerospaceImage from "../../../assets/Facilities/centre_for_aersospace.jpeg";
 import CenterForIoTImage from "../../../assets/Facilities/center_for_iot.jpg";
 import PlacementImage from "../../../assets/Facilities/placement.jpg";
+import CeatImage from "../../../assets/Facilities/ceat.png"
 
 // Facilities Images Imports
 import TEDCImage from "../../../assets/FacilitiesIcons/tedc.png";
@@ -63,58 +67,63 @@ export const numberCountsData2 = [
 
 export const departmentsData: HorizontalCard[] = [
   {
-    name: "Computer Technology",
-    Icon: FaComputer,
-    iconFillColor: "#EA1179",
-    description: "Established - 2007",
-  },
-  {
     name: "Aeronautical Engineering",
-    Icon: FaPlaneDeparture,
-    iconFillColor: "#B799FF",
-    description: "Established - 2000",
+    Icon: <FaPlaneDeparture />,
+    // iconFillColor: "#B799FF",
+    iconFillColor: "#9848FF",
+    description: "Established - 1949",
   },
   {
     name: "Automobile Engineering",
-    Icon: FaCar,
-    iconFillColor: "#AEE2FF",
-    description: "Established - 2000",
+    Icon: <FaCar />,
+    // iconFillColor: "#AEE2FF",
+    iconFillColor: "red",
+    description: "Established - 1949",
   },
   {
     name: "Electronics Engineering",
-    Icon: GiCircuitry,
-    iconFillColor: "#1C6758",
-    description: "Established - 2000",
+    Icon: <GiCircuitry />, 
+    // iconFillColor: "#1C6758",
+    iconFillColor: "F94C10",
+    description: "Established - 1949",
   },
   {
     name: "Instrumentation Engineering",
-    Icon: HiMiniCpuChip,
+    Icon: <HiMiniCpuChip />,
     iconFillColor: "#F31559",
-    description: "Established - 2000",
+    description: "Established - 1949",
   },
   {
     name: "Production Technology",
-    Icon: GiGears,
-    iconFillColor: "orange",
-    description: "Established - 2000",
+    Icon: <GiGears />,
+    iconFillColor: "#F8DE22",
+    description: "Established - 1977",
   },
   {
     name: "Rubber and Plastics Technology",
-    Icon: GiFlatTire,
-    iconFillColor: "#960E10",
-    description: "Established - 2000",
+    Icon: <img src={Rpt} style={{width: "70%"}}/>,
+    // iconFillColor: "#960E10",
+    iconFillColor: "#0D1282",
+    description: "Established - 1988",
   },
   {
     name: "Information Technology",
-    Icon: GiSatelliteCommunication,
-    iconFillColor: "#5E481C",
-    description: "Established - 2000",
+    Icon: <GiSatelliteCommunication />,
+    iconFillColor: "#FE7BE5",
+    description: "Established - 2001",
+  },
+  {
+    name: "Computer Technology",
+    Icon: <FaComputer />,
+    // iconFillColor: "#EA1179",
+    iconFillColor: "#0096FF",
+    description: "Established - 2010",
   },
   {
     name: "Applied Science and Humanities",
-    Icon: GiHumanPyramid,
-    iconFillColor: "#196157",
-    description: "Established - 2000",
+    Icon: <GiHumanPyramid />,
+    iconFillColor: "#38E54D",
+    description: "Established - 2021",
   },
 ];
 
@@ -150,7 +159,7 @@ export const footerContents: FooterContent[] = [
     url: "#",
     content: [
       {
-        title: "Dean, MIT Campus",
+        title: "Dean",
         url: "https://annauniv.irins.org/profile/43400",
       },
       {
@@ -250,6 +259,16 @@ export const centersData = [
   {
     title: "Health Center",
     img: HealthCentreImage,
+    description: "2K+ Active Members",
+  },
+  {
+    title: "SCoE",
+    img: "",
+    description: "2K+ Active Members",
+  },
+  {
+    title: "CEAT",
+    img: CeatImage,
     description: "2K+ Active Members",
   },
 ];

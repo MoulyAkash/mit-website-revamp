@@ -20,6 +20,7 @@ import RubberAndPlasticsHome from "./pages/public/Departments/RubberAndPlastics/
 // Admin Pages Import
 
 import AdminMainApp from "./pages/admin/MainApp";
+import OfficeStaff from "./pages/public/Administration/OfficeStaff";
 
 const generateAppData = (publicRoutes: any, privateRoutes: any) => {
   const topBarItems = publicRoutes.filter((route: any) => !route.avoidInHeader);
@@ -102,17 +103,18 @@ export const allPublicRoutes = [
     ],
   },
   {
-    path: "/administration",
+    path: "/administration/",
     title: "Administration",
-    element: <Home />,
+    element: <OfficeStaff />,
     children: [
       {
         path: "https://annauniv.irins.org/profile/43400",
         title: "Dean",
       },
       {
-        path: "https://mitindia.edu/en/administration/office-page",
+        path: "officeStaff",
         title: "Office Staff",
+        element: <OfficeStaff />
       },
     ],
   },

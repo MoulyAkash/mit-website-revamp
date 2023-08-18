@@ -1,7 +1,8 @@
 import React from "react";
 import "./dean.css";
 // import DeanImage from "./professor1.png";
-import DeanImage from "./Dean_bgRemoved.png";
+// import DeanImage from "./Dean_bgRemoved.png";
+import DeanImage from "./dean.png"
 
 function Dean() {
   return (
@@ -20,16 +21,15 @@ function Dean() {
         <div className="deanContent">
           <div className="deanTitle">
             <span>Limitless Learning, </span>
-            <span>Limitless Possibilities!</span>
+            <span>Limitless Oppurtunities!</span>
           </div>
           <div className="deanQuote">
             <span>
               <blockquote>
-                It's impossible to accuse someone of being judgemental without
-                being judgemental
+              Madras Institute of Technology (MIT) is a pioneering technological institution in India, satiating the technical thirst of many young aspiring professionals through state-of-the-art facilities, excellence infrastructure, high quality Laboratories and Centres of excellence.  The institute has received generous funding support from various National and International Funding agencies and its administration ultimately provides a stimulating environment conducive to studies and research.
               </blockquote>
             </span>
-            <span>Until we meet again</span>
+            <span>Prof. J. Prakash, Dean</span>
           </div>
           <div className="flex-row">
             <button className="more-button">Know More</button>
@@ -37,9 +37,7 @@ function Dean() {
         </div>
         <div className="deanImage">
           <img
-            src={DeanImage}
-            // style={{ marginRight: 20, height: "100%", marginBottom: -40 }}
-          />
+            src={DeanImage} />
         </div>
       </div>
     </div>

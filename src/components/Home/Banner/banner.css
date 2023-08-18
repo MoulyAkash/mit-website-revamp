@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 2vh;
-  @media only screen and (max-width: 910px) {
+  @media only screen and (max-width: 1200px) {
     flex-direction: column-reverse;
     align-items: center;
     gap: 10px;
@@ -22,12 +22,31 @@
   flex: 1;
 }
 
+.banner > .right::before {
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0) 0,
+    #f9fbfc 30%
+  );
+  height: 110%;
+  width: 10%;
+  content: "";
+}
+
+@media (max-width: 1200px){
+  .banner > .right::before{
+    display: none;
+  }
+}
+
 .banner > .right > .banner-image {
   width: 100%;
-  max-height: 500px;
+  /* max-height: 500px; */
   max-height: 700px;
-  /* background-color: red; */
   object-fit: contain;
+  /* object-fit: cover; */
   @media only screen and (max-width: 910px) {
     max-height: 500px;
   }
@@ -69,7 +88,7 @@
   height: 100%;
   padding: 30px 75px;
   justify-content: center;
-  @media only screen and (max-width: 910px) {
+  @media only screen and (max-width: 1200px) {
     width: 100%;
     padding: 10px 30px;
   }
@@ -89,6 +108,15 @@
   text-transform: capitalize;
   @media only screen and (max-width: 910px) {
     font-size: 35px;
+  }
+}
+.banner > .left > h1 > img{
+  height: 100px;
+  width: 100px;
+  margin-bottom: 10px;
+  margin-top: -20px;
+  @media only screen and (max-width: 910px) {
+    margin-top: 0;
   }
 }
 

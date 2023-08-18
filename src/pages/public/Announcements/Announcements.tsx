@@ -2,23 +2,26 @@ import { useEffect, useState } from "react";
 import AnnouncementCard from "./Card/announcementCard";
 import "./announcements.css";
 import APIService from "../../../api/Service";
-
 interface Announcement {
   id: number;
   announcementType: string;
-  announcementDate: string;
+  announcementDate: Date;
   viewmore: string;
   description: string;
   announcementTitle: string;
+  announcementValidity: Date;
+}
+interface filteredAnnouncement {
+  Active_Announcement: Announcement[];
+  Expired_Announcment: Announcement[];
 }
 
 export default function Announcements() {
-  const [Olddata, setOldData] = useState<Announcement[]>([]);
-  const [recentdata, setrecentData] = useState<Announcement[]>([]);
+  const [AnnouncemntType,setAnnouncementType] = useState<boolean>(true);
   const [PossibleAnnouncementTypes, setPossibleAnnouncementTypes] = useState<
     string[]
   >([]);
-
+  const [data, setdata] = useState<filteredAnnouncement>();
   const GetData = () => {
     const body = {
       tag: "getAnnouncement",
@@ -26,8 +29,6 @@ export default function Announcements() {
     };
     APIService.PostData(body, "/DB/Query")
       .then((res: any) => {
-        console.log(res?.data);
-
         separateAnnouncements(res?.data);
         setPossibleAnnouncementTypes(getAllAnnouncementTypes(res?.data));
       })
@@ -56,19 +57,21 @@ export default function Announcements() {
     array: Announcement[]
   ): { recent: Announcement[]; other: Announcement[] } => {
     const today = new Date();
-    const recentThreshold = new Date(today.getTime() - 5 * 24 * 60 * 60 * 1000);
     const recentAnnouncements: Announcement[] = [];
     const otherAnnouncements: Announcement[] = [];
     array.forEach((item) => {
-      const timestamp = new Date(item.announcementDate);
-      if (timestamp >= recentThreshold) {
+      const timestamp = new Date(item.announcementValidity);
+      if (timestamp >= today) {
         recentAnnouncements.push(item);
       } else {
         otherAnnouncements.push(item);
       }
+      setdata({
+        Active_Announcement: recentAnnouncements,
+        Expired_Announcment: otherAnnouncements,
+      });
+      // console.log(typeof(data));
     });
-    setOldData(otherAnnouncements);
-    setrecentData(recentAnnouncements);
     return { recent: recentAnnouncements, other: otherAnnouncements };
   };
 
@@ -77,25 +80,27 @@ export default function Announcements() {
   }, []);
 
   return (
-    <div className="anouncementContainer">
-      {recentdata.length > 0 && (
-        <div className="recentTextContainer">
-          <div className="announcementType">Latest Updates</div>
+    <div className="anouncementContainer noselect">
+      <div className="recentTextContainer">
+        <div className="announcementType">
+          <div className={(AnnouncemntType)  ? "active" : "passive"} onClick={()=>setAnnouncementType(true)}>Active</div>
+          <div className={(!AnnouncemntType)  ? "active" : "passive"} onClick={()=>setAnnouncementType(false)}>Archive </div>
+        </div>
+        {data && (
           <div className="recentContainer">
             {PossibleAnnouncementTypes.map((announcementType, index) => (
               <div key={index} className="announcementTypeContainer">
-                {/* <div className="headText">
-  
-                    {announcementType}
-                  </div> */}
                 <div className="announcementCardContainer">
-                  {FilterAnnouncement(recentdata, announcementType).map(
+                  {FilterAnnouncement(
+                    AnnouncemntType ? data.Active_Announcement : data.Expired_Announcment,
+                    announcementType
+                  ).map(
                     (announcement) =>
                       announcement && (
                         <AnnouncementCard
                           data={announcement}
                           key={announcement.id}
-                          type={true}
+                          type={AnnouncemntType}
                         />
                       )
                   )}
@@ -103,35 +108,8 @@ export default function Announcements() {
               </div>
             ))}
           </div>
-        </div>
-      )}
-      {Olddata.length > 0 && (
-        <div className="oldTextContainer">
-          <div className="announcementType">Past Announcement</div>
-          <div className="recentContainer">
-            {PossibleAnnouncementTypes.map((announcementType, index) => (
-              <div key={index} className="announcementTypeContainer">
-                {/* <div className="headText">
-  
-                    {announcementType}
-                  </div> */}
-                <div className="announcementCardContainer">
-                  {FilterAnnouncement(Olddata, announcementType).map(
-                    (announcement) =>
-                      announcement && (
-                        <AnnouncementCard
-                          data={announcement}
-                          key={announcement.id}
-                          type={false}
-                        />
-                      )
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

@@ -30,11 +30,11 @@ function Footer() {
   const [selectedLanguage, setSelectedLanguage] = useState("English");
 
   return (
-    <div className="footer-container">
+    <div className="footer-container noselect">
       <span>
         <span>
           <h1>Anna University, MIT Campus</h1>
-          <p>Example344@gmail.com · +880 123 456 789</p>
+          <p>dean@mitindia.edu | +044 2251 6002</p>
           <div className="map-contact-container">
             <div className="map-container">
               <Map latitude={location.lat} longitude={location.lng} />
@@ -44,7 +44,7 @@ function Footer() {
             </div>
           </div>
           <div className="copyright">
-            © 2022 All Rights Reserved By Anna University, MIT Campus
+            © 2023 All Rights Reserved By <a href="#!"> @MIT WebTeam </a>
           </div>
         </span>
       </span>

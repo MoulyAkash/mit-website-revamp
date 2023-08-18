@@ -14,9 +14,9 @@ function HorizontalCard({
   description,
 }: HorizontalCard) {
   return (
-    <div className="dept-card">
-      <div className="svg-container" style={{ backgroundColor: iconFillColor }}>
-        <Icon />
+    <div className="dept-card noselect">
+      <div className="svg-container" style={{ backgroundColor: iconFillColor  }}>
+        {Icon}
       </div>
       <div className="details">
         <div className="dept-name">{name}</div>
@@ -29,7 +29,7 @@ function HorizontalCard({
 export default function HorizontalCards({ data }: { data: HorizontalCard[] }) {
   return (
     <div className="dept-container">
-      <div className="title">Our Departments</div>
+      <div className="title">Departments</div>
       <div className="dept-wrapper">
         {data?.map((item: HorizontalCard, index: number) => (
           <HorizontalCard key={index} {...item} />
