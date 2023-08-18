@@ -83,8 +83,7 @@ export const departmentsData: HorizontalCard[] = [
   {
     name: "Electronics Engineering",
     Icon: <GiCircuitry />, 
-    // iconFillColor: "#1C6758",
-    iconFillColor: "F94C10",
+    iconFillColor: "#F94C10",
     description: "Established - 1949",
   },
   {

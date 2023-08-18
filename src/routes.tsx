@@ -150,7 +150,7 @@ export const allPublicRoutes = [
   },
   {
     // path: "/about?/:section",
-    path: "https://mitindia.edu/en/home/history",
+    path: "/about",
     title: "About Us",
     element: <About />,
   },
