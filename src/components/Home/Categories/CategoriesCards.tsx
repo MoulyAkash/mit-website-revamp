@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import {  useRef } from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import "./categoriescards.css";
 import { facilitiesData } from "../../../pages/public/Home/data";

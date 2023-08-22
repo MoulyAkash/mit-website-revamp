@@ -1,4 +1,3 @@
-import React from "react";
 import "./dean.css";
 // import DeanImage from "./professor1.png";
 // import DeanImage from "./Dean_bgRemoved.png";

@@ -1,6 +1,6 @@
-import React from "react";
+// import React from "react";
 import "./staffcard.css";
-import { IoCall, IoMailOutline } from "react-icons/io5";
+import { IoCall } from "react-icons/io5";
 
 function StaffCard(props: any) {
   return (

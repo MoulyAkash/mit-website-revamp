@@ -1,6 +1,6 @@
-import React from "react";
+// import React from "react";
 import "./announcementCards.css";
-import { IoMdShareAlt } from "react-icons/io";
+// import { IoMdShareAlt } from "react-icons/io";
 import { HiSpeakerphone } from "react-icons/Hi";
 export default function AnnouncementCard(props: any) {
   const processDate = (AnnouncementDate: any) => {

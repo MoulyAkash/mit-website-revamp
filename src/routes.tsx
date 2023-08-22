@@ -6,16 +6,16 @@ import {} from "react-icons/bi";
 import MainApp from "./pages/public/MainApp";
 import Home from "./pages/public/Home/Home";
 import About from "./pages/public/About/About";
-import Contact from "./pages/public/Contact/Contact";
+// import Contact from "./pages/public/Contact/Contact";
 import Announcements from "./pages/public/Announcements/Announcements";
 
 // Department Pages Import
-import AeroNauticalHome from "./pages/public/Departments/Aeronautical/Home";
-import AutomobileHome from "./pages/public/Departments/Automobile/Home";
-import ElectronicsHome from "./pages/public/Departments/Electronics/Home";
-import InstrumentationHome from "./pages/public/Departments/Instrumentation/Home";
-import ProductionHome from "./pages/public/Departments/Production/Home";
-import RubberAndPlasticsHome from "./pages/public/Departments/RubberAndPlastics/Home";
+// import AeroNauticalHome from "./pages/public/Departments/Aeronautical/Home";
+// import AutomobileHome from "./pages/public/Departments/Automobile/Home";
+// import ElectronicsHome from "./pages/public/Departments/Electronics/Home";
+// import InstrumentationHome from "./pages/public/Departments/Instrumentation/Home";
+// import ProductionHome from "./pages/public/Departments/Production/Home";
+// import RubberAndPlasticsHome from "./pages/public/Departments/RubberAndPlastics/Home";
 
 // Admin Pages Import
 
@@ -59,34 +59,34 @@ export const allPublicRoutes = [
     element: <Home />,
     children: [
       {
-        path: "aeronauticalEngineering",
+        path: "https://mitindia.edu/en/aero-home",
         title: "Aeronautical Engineering",
-        element: <AeroNauticalHome />,
+        // element: <AeroNauticalHome />,
       },
       {
-        path: "automobileEngineering",
+        path: "https://mitindia.edu/en/auto-home",
         title: "Automobile Engineering",
-        element: <AutomobileHome />,
+        // element: <AutomobileHome />,
       },
       {
-        path: "electronicsEngineering",
+        path: "https://mitindia.edu/en/ece-home",
         title: "Electronics Engineering",
-        element: <ElectronicsHome />,
+        // element: <ElectronicsHome />,
       },
       {
-        path: "instrumentationEngineering",
+        path: "https://mitindia.edu/en/ece-home",
         title: "Instrumentation Engineering",
-        element: <InstrumentationHome />,
+        // element: <InstrumentationHome />,
       },
       {
-        path: "productionTechnology",
+        path: "https://mitindia.edu/en/pt-home",
         title: "Production Technology",
-        element: <ProductionHome />,
+        // element: <ProductionHome />,
       },
       {
-        path: "rubberAndPlasticsTechnology",
+        path: "https://mitindia.edu/en/rpt-home",
         title: "Rubber and Plastics Technology",
-        element: <RubberAndPlasticsHome />,
+        // element: <RubberAndPlasticsHome />,
       },
       {
         path: "http://www.it.mitindia.edu/",
@@ -154,11 +154,11 @@ export const allPublicRoutes = [
     title: "About Us",
     element: <About />,
   },
-  {
-    path: "/contact",
-    title: "Contact",
-    element: <Contact />,
-  },
+  // {
+  //   path: "/contact",
+  //   title: "Contact",
+  //   element: <Contact />,
+  // },
   {
     path: "/announcements",
     title: "Announcements",

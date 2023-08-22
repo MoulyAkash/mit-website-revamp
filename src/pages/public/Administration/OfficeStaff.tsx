@@ -1,25 +1,17 @@
-import React, { useEffect } from "react";
-import Header from "../../../components/general/Header/Header";
-import Footer from "../../../components/general/Footer/Footer";
-import "./officestaff.css";
+// import React, { useEffect } from "react";
+// import Header from "../../../components/general/Header/Header";
+// import Footer from "../../../components/general/Footer/Footer";
+// import "./officestaff.css";
 
-import tom from "../../../assets/Faculty/DeanOffice/tom.jpg";
-import drmm from "../../../assets/Faculty/DeanOffice/MrMMaheswaran.png";
+// import tom from "../../../assets/Faculty/DeanOffice/tom.jpg";
+// import drmm from "../../../assets/Faculty/DeanOffice/MrMMaheswaran.png";
 import StaffCard from "./StaffCard";
 
 import { officeAdministration, financeSection, studentSection } from "./details";
 
 function OfficeStaff() {
 
-  const officeStaffData = [
-    {
-      img: drmm,
-      name: "Mr. M. Maheswaran",
-      designation: "Deputy Registrar",
-      email: "tom@gmail.com",
-      phno: "044-22516301",
-    },
-  ];
+ 
   return (
     <div className="office-staff-container">
 

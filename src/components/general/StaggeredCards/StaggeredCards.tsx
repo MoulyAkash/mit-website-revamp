@@ -1,4 +1,3 @@
-import React from "react";
 import "./staggeredcards.css";
 
 import { centersData } from "../../../pages/public/Home/data";

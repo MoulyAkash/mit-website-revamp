@@ -3,13 +3,13 @@ import { BiSolidBell } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import "./banner.css";
 
-import BannerImage from "../../../assets/banner-student.png";
+// import BannerImage from "../../../assets/banner-student.png";
 // import MITFrontGate from "../../../assets/mit-front-gate.jpg";
 import MITFrontGate from "../../../assets/mit-front.jpg";
-import Subish from "../../../assets/subsus.png";
-import BookImage from "../../../assets/book.png";
-import ChartImage from "../../../assets/chart.png";
-import ChatImage from "../../../assets/chat.png";
+// import Subish from "../../../assets/subsus.png";
+// import BookImage from "../../../assets/book.png";
+// import ChartImage from "../../../assets/chart.png";
+// import ChatImage from "../../../assets/chat.png";
 // import AnnaLogo from "../../../assets/anna_logo.png";
 import AnnaLogo from "../../../assets/anna_logo_grey.png";
 

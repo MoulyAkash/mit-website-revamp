@@ -1,4 +1,3 @@
-import React from "react";
 import "./about.css";
 import {RiChatHistoryFill} from 'react-icons/ri'
 import {GiArchiveResearch} from 'react-icons/gi'

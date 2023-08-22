@@ -1,4 +1,3 @@
-import React from "react";
 import "./vision.css";
 
 export default function Vision() {

@@ -3,7 +3,7 @@ import "./home.css";
 import Banner from "../../../components/Home/Banner/Banner";
 import NumberCount from "../../../components/general/NumberCount/NumberCount";
 import HorizontalCards from "../../../components/general/HorizontalCards/HorizontalCards";
-import PlacementPartners from "../../../components/general/PlacementPartners/PlacementPartners";
+// import PlacementPartners from "../../../components/general/PlacementPartners/PlacementPartners";
 import StaggeredCards from "../../../components/general/StaggeredCards/StaggeredCards";
 
 import { departmentsData, numberCountsData, numberCountsData2 } from "./data";

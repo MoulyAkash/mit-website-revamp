@@ -5,7 +5,6 @@ import {
   GiGears,
   GiCircuitry,
   GiSatelliteCommunication,
-  GiFlatTire,
 } from "react-icons/gi";
 
 import Rpt from "../../../assets/rpt.png";
@@ -21,8 +20,8 @@ import cat from "../../../assets/PlacementPartners/caterpillar.svg";
 import barclays from "../../../assets/PlacementPartners/barclays.svg";
 
 // Centers Images Imports
+import Scoe from "../../../assets/Facilities/scoe.jpg";
 import LibraryImage from "../../../assets/Facilities/library.jpg";
-import HostelImage from "../../../assets/Facilities/hostel.jpg";
 import HealthCentreImage from "../../../assets/Facilities/health_centre.jpg";
 import ComputerCenterImage from "../../../assets/Facilities/computer_center.jpg";
 import SportsImage from "../../../assets/Facilities/sports.jpg";
@@ -262,7 +261,7 @@ export const centersData = [
   },
   {
     title: "SCoE",
-    img: "",
+    img: Scoe,
     description: "2K+ Active Members",
   },
   {

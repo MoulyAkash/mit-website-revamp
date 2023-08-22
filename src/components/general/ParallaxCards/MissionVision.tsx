@@ -1,4 +1,3 @@
-import React from 'react'
 import './missionvision.css'
 import Mission from './Mission'
 import Vision from './Vision'

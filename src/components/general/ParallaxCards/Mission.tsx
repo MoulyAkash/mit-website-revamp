@@ -1,9 +1,9 @@
 // import React from "react";
-import { useRef, useState } from "react";
+// import {  useState } from "react";
 import "./mission.css";
 
 export default function Mission() {
-  const [viewMore, setViewMore] = useState(true);
+  const viewMore = true; // usestate  but change bcz of BTS
   const MissionContent = [
     "Producing students who are intellectually and technically equipped with well defined knowledge, skills and ethics who are creative thinkers, inspiring leaders and contributing citizens",
     "Introducing high quality academic and research programmes and providing extension services in cutting edge technologies",
@@ -28,9 +28,9 @@ export default function Mission() {
         className="mi-content"
         style={viewMore ? { overflow: "auto", scrollbarColor: "inherit" } : {}}
       >
-        {MissionContent.map((item: any, index: any) => {
+        {MissionContent.map((item, index: number) => {
           if (!viewMore && index < 4) return <li key={index}>{item}</li>;
-          else if(viewMore) return <li key={index}>{item}</li>;
+          else if (viewMore) return <li key={index}>{item}</li>;
         })}
       </ul>
       <div className={`login-container ${viewMore ? "open" : ""}`}>
