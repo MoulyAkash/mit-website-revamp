@@ -10,7 +10,7 @@ export default function Header() {
     <header className="header-container noselect">
       <NavLink to={"/"} >
         <h1>
-          Anna<span>MIT</span>opia
+          Anna<span>MIT</span>
         </h1>
       </NavLink>
       <div className="burger-menu" onClick={() => setMenuOpen(!menuOpen)}>

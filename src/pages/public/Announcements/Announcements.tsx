@@ -17,10 +17,11 @@ interface filteredAnnouncement {
 }
 
 export default function Announcements() {
-  const [AnnouncemntType,setAnnouncementType] = useState<boolean>(true);
+  const [AnnouncemntType, setAnnouncementType] = useState<boolean>(true);
   const [PossibleAnnouncementTypes, setPossibleAnnouncementTypes] = useState<
     string[]
   >([]);
+  const [AnnouncementSize, setAnnouncementSize] = useState<boolean>(false);
   const [data, setdata] = useState<filteredAnnouncement>();
   const GetData = () => {
     const body = {
@@ -29,8 +30,13 @@ export default function Announcements() {
     };
     APIService.PostData(body, "/DB/Query")
       .then((res: any) => {
-        separateAnnouncements(res?.data);
-        setPossibleAnnouncementTypes(getAllAnnouncementTypes(res?.data));
+        if (res.success == 1) {
+          separateAnnouncements(res?.data);
+          setPossibleAnnouncementTypes(getAllAnnouncementTypes(res?.data));
+        }
+        else {
+          console.log(res?.data);
+        }
       })
       .catch((error) => console.log(error));
   };
@@ -66,6 +72,13 @@ export default function Announcements() {
       } else {
         otherAnnouncements.push(item);
       }
+      if (recentAnnouncements.length > 0 && otherAnnouncements.length > 0) {
+        setAnnouncementSize(true);
+      } else {
+        (recentAnnouncements.length > 0)
+          ? setAnnouncementType(true) : setAnnouncementType(false);
+
+      }
       setdata({
         Active_Announcement: recentAnnouncements,
         Expired_Announcment: otherAnnouncements,
@@ -82,10 +95,13 @@ export default function Announcements() {
   return (
     <div className="anouncementContainer noselect">
       <div className="recentTextContainer">
-        <div className="announcementType">
-          <div className={(AnnouncemntType)  ? "active" : "passive"} onClick={()=>setAnnouncementType(true)}>Active</div>
-          <div className={(!AnnouncemntType)  ? "active" : "passive"} onClick={()=>setAnnouncementType(false)}>Archive </div>
-        </div>
+        {
+          AnnouncementSize && (<div className="announcementType">
+            <div className={(AnnouncemntType) ? "active" : "passive"} onClick={() => setAnnouncementType(true)}>Active</div>
+            <div className={(!AnnouncemntType) ? "active" : "passive"} onClick={() => setAnnouncementType(false)}>Archive </div>
+          </div>
+          )
+        }
         {data && (
           <div className="recentContainer">
             {PossibleAnnouncementTypes.map((announcementType, index) => (

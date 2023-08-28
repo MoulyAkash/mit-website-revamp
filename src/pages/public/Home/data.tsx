@@ -68,6 +68,7 @@ export const departmentsData: HorizontalCard[] = [
   {
     name: "Aeronautical Engineering",
     Icon: <FaPlaneDeparture />,
+    link : "https://mitindia.edu/en/aero-home",
     // iconFillColor: "#B799FF",
     iconFillColor: "#9848FF",
     description: "Established - 1949",
@@ -75,6 +76,8 @@ export const departmentsData: HorizontalCard[] = [
   {
     name: "Automobile Engineering",
     Icon: <FaCar />,
+    link : "https://mitindia.edu/en/auto-home",
+    
     // iconFillColor: "#AEE2FF",
     iconFillColor: "red",
     description: "Established - 1949",
@@ -82,18 +85,24 @@ export const departmentsData: HorizontalCard[] = [
   {
     name: "Electronics Engineering",
     Icon: <GiCircuitry />, 
+    link : "https://mitindia.edu/en/ece-home",
+    
     iconFillColor: "#F94C10",
     description: "Established - 1949",
   },
   {
     name: "Instrumentation Engineering",
     Icon: <HiMiniCpuChip />,
+    link : "https://mitindia.edu/en/instrumentation-home",
+    
     iconFillColor: "#F31559",
     description: "Established - 1949",
   },
   {
     name: "Production Technology",
     Icon: <GiGears />,
+    link : "https://mitindia.edu/en/pt-home",
+    
     iconFillColor: "#F8DE22",
     description: "Established - 1977",
   },
@@ -101,12 +110,16 @@ export const departmentsData: HorizontalCard[] = [
     name: "Rubber and Plastics Technology",
     Icon: <img src={Rpt} style={{width: "70%"}}/>,
     // iconFillColor: "#960E10",
+    link : "https://mitindia.edu/en/rpt-home",
+    
     iconFillColor: "#0D1282",
     description: "Established - 1988",
   },
   {
     name: "Information Technology",
     Icon: <GiSatelliteCommunication />,
+    link : "http://www.it.mitindia.edu/",
+    
     iconFillColor: "#FE7BE5",
     description: "Established - 2001",
   },
@@ -114,12 +127,15 @@ export const departmentsData: HorizontalCard[] = [
     name: "Computer Technology",
     Icon: <FaComputer />,
     // iconFillColor: "#EA1179",
+    link : "http://www.ct.mitindia.edu/dct/#/home",
+    
     iconFillColor: "#0096FF",
     description: "Established - 2010",
   },
   {
     name: "Applied Science and Humanities",
     Icon: <GiHumanPyramid />,
+    link : "hhttp://www.dash.mitindia.edu/",
     iconFillColor: "#38E54D",
     description: "Established - 2021",
   },
@@ -222,52 +238,52 @@ export const centersData = [
   {
     title: "Computer Center",
     img: ComputerCenterImage,
-    description: "2K+ Active Members",
+    // description: "2K+ Active Members",
   },
   {
     title: "AUKBC - MIT",
     img: AUKBCImage,
-    description: "2K+ Active Members",
+    // description: "2K+ Active Members",
   },
   {
     title: "Center for Aerospace",
     img: CentreForAerospaceImage,
-    description: "2K+ Active Members",
+    // description: "2K+ Active Members",
   },
   {
     title: "Center for IoT",
     img: CenterForIoTImage,
-    description: "2K+ Active Members",
+    // description: "2K+ Active Members",
   },
   {
     title: "Library",
     img: LibraryImage,
-    description: "2K+ Active Members",
+    // description: "2K+ Active Members",
   },
   {
     title: "Placement",
     img: PlacementImage,
-    description: "2K+ Active Members",
+    // description: "2K+ Active Members",
   },
   {
     title: "Sports",
     img: SportsImage,
-    description: "2K+ Active Members",
+    // description: "2K+ Active Members",
   },
   {
     title: "Health Center",
     img: HealthCentreImage,
-    description: "2K+ Active Members",
+    // description: "2K+ Active Members",
   },
   {
     title: "SCoE",
     img: Scoe,
-    description: "2K+ Active Members",
+    // description: "2K+ Active Members",
   },
   {
     title: "CEAT",
     img: CeatImage,
-    description: "2K+ Active Members",
+    // description: "2K+ Active Members",
   },
 ];
 

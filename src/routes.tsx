@@ -74,7 +74,7 @@ export const allPublicRoutes = [
         // element: <ElectronicsHome />,
       },
       {
-        path: "https://mitindia.edu/en/ece-home",
+        path: "https://mitindia.edu/en/instrumentation-home",
         title: "Instrumentation Engineering",
         // element: <InstrumentationHome />,
       },

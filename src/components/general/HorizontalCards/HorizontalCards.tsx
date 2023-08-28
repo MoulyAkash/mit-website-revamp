@@ -3,6 +3,7 @@ import "./horizontalcards.css";
 export interface HorizontalCard {
   name: string;
   Icon: any;
+  link : string;
   iconFillColor: string;
   description: string;
 }
@@ -12,10 +13,11 @@ function HorizontalCard({
   Icon,
   iconFillColor,
   description,
+  link,
 }: HorizontalCard) {
   return (
-    <div className="dept-card noselect">
-      <div className="svg-container" style={{ backgroundColor: iconFillColor  }}>
+    <div className="dept-card noselect" onClick={()=>window.open(link, "_blank")}>
+      <div className="svg-container" style={{ backgroundColor: iconFillColor  }} >
         {Icon}
       </div>
       <div className="details">

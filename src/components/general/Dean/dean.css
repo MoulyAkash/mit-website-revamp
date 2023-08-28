@@ -97,7 +97,7 @@
 }
 .deanMain > .deanMask > .deanImage > img{
   margin-right: 20px;
-  height: 150%;
+  /* height: 150%; */
   /* width: 100%; */
   z-index: 1;
   /* border: red solid; */
@@ -125,10 +125,12 @@
   }
   .deanmain > .deanMask > img{
     object-fit: cover;
+    object-position: center;
+
   }
   
 }
-@media (max-width: 914px) {
+@media (max-width: 900px) {
 
   .deanMain .deanContent {
     padding: 40px;
@@ -136,7 +138,7 @@
   .deanMain {
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
+    height: fit-content;
   }
   .deanMain > .deanMask{
     flex-wrap: wrap-reverse;
@@ -153,8 +155,10 @@
   }
   .deanMain > .deanMask > .deanImage > img{
     margin-right: 0;
-    height: 418px;
+
+    height:418px;    
   }
+  
   .deanMain .deanContent{
     /* margin-top: 100px; */
   }

@@ -35,14 +35,16 @@ export default function Banner() {
   return (
     <div className="banner noselect">
       <div className="left">
-        <h1>
+        <div className="logo-container">
           <img
             src={AnnaLogo}
             // style={{ height: 100, width: 100, marginBottom: 10, marginTop: -20 }}
-          />
-          <p>Madras Institute of Technology Campus</p>
+            />
+        <h1>
           <p>Anna University</p>
         </h1>
+        </div>
+        <p className="campus-container">Madras Institute of Technology Campus</p>
         <div className="description">
           <p>Established in 1949, by Shri C. Rajam</p>
           <p>Merged in 1978 with Anna University</p>
@@ -54,7 +56,7 @@ export default function Banner() {
             <BiSolidBell size={20} />
             Announcements
           </NavLink>
-          {annnouncementCount && <p>{annnouncementCount} new in last 7 days</p>}
+          {annnouncementCount > 0 && <p>{annnouncementCount} new in last 7 days</p>}
         </div>
       </div>
       <div className="right">

@@ -1,5 +1,5 @@
 //@ts-nocheck
-const url = "http://14.139.190.106:3000";
+const url = "http://localhost:3000";
 
 
 export default class APIService {

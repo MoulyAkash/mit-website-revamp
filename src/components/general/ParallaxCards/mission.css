@@ -7,7 +7,9 @@
   flex-direction: column;
   gap: 10px;
   background: #6600ff;
-  background: radial-gradient(at left top, #34dd88, #38d9c2);
+  /* background: radial-gradient(at left top, #34dd88, #38d9c2); */
+  background: radial-gradient(at left top, #61876E, #1C6758);
+
   color: var(--white);
   font-weight: 600;
   padding-left: 35vw;

@@ -40,7 +40,9 @@
     min-width: 100%;
   }
 }
-
+.dept-card:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+}
 .dept-card .svg-container {
   height: 50px;
   width: 50px;
